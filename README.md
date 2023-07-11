@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# User Grid Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The User Grid web application is a React-based application that displays a grid layout of users fetched from an API. It includes a navbar with a brand name and a "Get Users" button that triggers the API call to fetch user data. While the data is being fetched, a loader is displayed.
 
-## Available Scripts
+## Method Used to Make the App
 
-In the project directory, you can run:
+The User Grid web application was created using the following steps and techniques:
 
-### `npm start`
+1. **Create-React-App**: The application was bootstrapped using Create-React-App.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **React Components**: The application is structured as a set of React components. The main component, `App`, serves as the entry point and contains the main logic and state of the application.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **State Management with Hooks**: The `useState` hook from React was used to manage the application state. Two state variables were defined: `users` to store the fetched user data, and `loading` to track the loading state while the API call is in progress.
 
-### `npm test`
+4. **API Interaction with Axios**: The Axios library was used to make HTTP requests to the API. The `axios.get` method was used to fetch user data from the specified API endpoint (`https://reqres.in/api/users?page=1`).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. **Event Handling**: The "Get Users" button in the navbar is associated with an `onClick` event handler, `getUsers`. When the button is clicked, the `getUsers` function is called, which triggers the API call to fetch user data.
 
-### `npm run build`
+6. **Conditional Rendering**: The application uses conditional rendering to display either the loader or the user grid based on the loading state. While the API call is in progress (`loading` is `true`), the loader is displayed. Once the data is fetched, the user grid is rendered.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+7. **Styling with CSS**: CSS styles were applied to the components to define the visual appearance of the application. The styles include navbar styling, user grid layout, user card design, and the loader styling.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+8. **Error Handling**: In case of an error while fetching user data, an error message is logged to the console.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+9. **Development Server**: The application can be run locally using the development server provided by Create-React-App. Changes made to the code are automatically reloaded in the browser.
 
-### `npm run eject`
+## Time taken to complete this assignment
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+It took around 7 hours to complete this assignment.
